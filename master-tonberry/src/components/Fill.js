@@ -10,7 +10,7 @@ class Fill extends React.Component {
   render () {
     return (
         <div id="fillDiv">
-        <p><b>'You must understand that there is more than one path to the top of the mountain.'  <u>Miyamoto Musashi</u></b></p>
+        <p><b>'You must understand that there is more than one path to the top of the mountain.'  <u><a href="/profile">Miyamoto Musashi</a></u></b></p>
         </div>
     );
   }
