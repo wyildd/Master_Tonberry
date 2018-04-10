@@ -2,18 +2,23 @@ import React, { Component } from 'react';
 import Sidebar from "./components/Sidebar.js";
 import Header from "./components/Header.js";
 import Fill from "./components/Fill.js";
+import YouTube from "./YouTube.js";
 import './App.css';
+// import YouTube from 'react-youtube';
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-      <Header />
+        <Header />
         <Sidebar />
+		    <YouTube />
         <Fill />
-        </div>
+      </div>
     );
   }
 }
+
+
 
 export default App;
