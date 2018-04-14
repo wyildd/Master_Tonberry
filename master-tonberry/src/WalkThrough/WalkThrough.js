@@ -6,7 +6,7 @@ class YouTube extends Component {
 
 constructor(props){
   super(props);
-  this.boss="Ifrit"
+  this.boss=""
   this.state={};
 }
 

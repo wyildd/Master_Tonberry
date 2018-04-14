@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Sidebar from "./components/Sidebar.js";
 import Header from "./components/Header.js";
 import Fill from "./components/Fill.js";
-import YouTube from "./YouTube.js";
+import YouTube from "./WalkThrough/WalkThrough.js";
 import './App.css';
 // import YouTube from 'react-youtube';
 
