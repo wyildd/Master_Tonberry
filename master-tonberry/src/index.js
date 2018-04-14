@@ -1,40 +1,27 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
-import { Router, browserHistory } from 'react-router';
-import reduxThunk from 'redux-thunk';
-import cookie from 'react-cookie';
-import routes from './routes';
-import reducers from './reducers/index';
-import ReactGA from 'react-ga';
-import { AUTH_USER } from './actions/types';
-
-// Import stylesheets
-import './public/stylesheets/base.scss';
-
-// Initialize Google Analytics
-ReactGA.initialize('UA-000000-01');
-
-function logPageView() {
-  ReactGA.pageview(window.location.pathname);
-}
-
-const createStoreWithMiddleware = applyMiddleware(reduxThunk)(createStore);
-const store = createStoreWithMiddleware(reducers);
-
-const token = cookie.load('token');
-
-if (token) {
-  // Update application state. User has token and is probably authenticated
-  store.dispatch({ type: AUTH_USER });
-}
+import { BrowserRouter as Router, Route } from 'react-router-dom';
+import '../node_modules/bootstrap/dist/css/bootstrap.css';
+import './index.css';
+import App from './App';
+import registerServiceWorker from './registerServiceWorker';
+import Login from './components/Login';
+import Register from './components/Register';
+import Edit from './components/Edit';
+import Create from './components/Create';
+import Show from './components/Show';
 
 ReactDOM.render(
-  <Provider store={store}>
-    <Router history={browserHistory} routes={routes} onUpdate={logPageView} />
-  </Provider>,
-  document.querySelector('.wrapper'));
-
-ReactDOM.render(<App />, document.getElementById('root'));
+  <Router>
+      <div>
+        <Route exact path='/' component={App} />
+        <Route path='/login' component={Login} />
+        <Route path='/register' component={Register} />
+        <Route path='/edit/:id' component={Edit} />
+        <Route path='/create' component={Create} />
+        <Route path='/show/:id' component={Show} />
+      </div>
+  </Router>,
+  document.getElementById('root')
+);
 registerServiceWorker();
