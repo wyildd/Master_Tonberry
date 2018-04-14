@@ -13,7 +13,7 @@ constructor(props){
   render() {
     return (
       <div>
-      <iframe width="560" height="315" src="https://www.youtube.com/embed?listType=search&list={this.boss}walkthrough" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed?listType=search&list={this.boss}walkthrough" frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
       </div>
       );
       }
