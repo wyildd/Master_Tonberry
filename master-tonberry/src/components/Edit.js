@@ -42,15 +42,15 @@ class Edit extends Component {
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">
-              EDIT BOOK
+              EDIT USER POST
             </h3>
           </div>
           <div class="panel-body">
             <h4><Link to={`/show/${this.state.book._id}`}><span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Book List</Link></h4>
             <form onSubmit={this.onSubmit}>
               <div class="form-group">
-                <label for="isbn">ISBN:</label>
-                <input type="text" class="form-control" name="isbn" value={this.state.book.isbn} onChange={this.onChange} placeholder="ISBN" />
+                <label for="isbn">Game:</label>
+                <input type="text" class="form-control" name="isbn" value={this.state.book.isbn} onChange={this.onChange} placeholder="Game" />
               </div>
               <div class="form-group">
                 <label for="title">Title:</label>
@@ -65,12 +65,12 @@ class Edit extends Component {
                 <input type="text" class="form-control" name="description" value={this.state.book.description} onChange={this.onChange} placeholder="Description" />
               </div>
               <div class="form-group">
-                <label for="published_date">Published Date:</label>
-                <input type="number" class="form-control" name="published_year" value={this.state.book.published_year} onChange={this.onChange} placeholder="Published Year" />
+                <label for="published_date">Patch:</label>
+                <input type="number" class="form-control" name="published_year" value={this.state.book.published_year} onChange={this.onChange} placeholder="Patch" />
               </div>
               <div class="form-group">
-                <label for="publisher">Publisher:</label>
-                <input type="text" class="form-control" name="publisher" value={this.state.book.publisher} onChange={this.onChange} placeholder="Publisher" />
+                <label for="publisher">Guide:</label>
+                <input type="text" class="form-control" name="publisher" value={this.state.book.publisher} onChange={this.onChange} placeholder="Guide" />
               </div>
               <button type="submit" class="btn btn-default">Submit</button>
             </form>

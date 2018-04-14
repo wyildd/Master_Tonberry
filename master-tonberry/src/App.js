@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './App.css';
 
-class App extends component {
+class App extends Component {
 
   constructor(props) {
     super(props);
@@ -38,7 +38,7 @@ class App extends component {
         <div class="panel panel-default">
           <div class="panel-heading">
             <h3 class="panel-title">
-              BOOK CATALOG &nbsp;
+              
               {localStorage.getItem('jwtToken') &&
                 <button class="btn btn-primary" onClick={this.logout}>Logout</button>
               }
