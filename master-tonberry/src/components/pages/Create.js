@@ -1,9 +1,11 @@
 import React from "react";
-// import Header from "./Header";
-// import Fill from "./Fill";
+import Header from "./Header";
+import Fill from "./Fill";
+
 
 const Create = () => (
   <div>
+  <Header />
     <h1>Create Page</h1>
     <p>
       Nunc pharetra finibus est at efficitur. Praesent sed congue diam. Integer gravida dui mauris,
@@ -12,6 +14,7 @@ const Create = () => (
       imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus in. Sed rhoncus mollis
       diam, sit amet facilisis lectus blandit at.
     </p>
+    <Fill />
   </div>
 );
 

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 
 
-class YouTube extends Component {
+class WalkThrough extends Component {
 
 constructor(props){
   super(props);
@@ -19,4 +19,4 @@ constructor(props){
       }
     }
 
-export default YouTube;
+export default WalkThrough;
