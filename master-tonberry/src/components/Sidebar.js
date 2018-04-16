@@ -1,23 +1,29 @@
 import React from 'react';
+import { Link } from "react-router-dom";
 import { bubble as Menu } from 'react-burger-menu'
 
-class Sidebar extends React.Component {
-  showSettings (event) {
-    event.preventDefault();
+const Sidebar = () => (
+  // showSettings (event) {
+  //   event.preventDefault();
     
-  }
+  // }
 
-  render () {
-    return (
-      <Menu>
-        <a id="home" className="menu-item" href="/">Home</a>
-        <a id="learn" className="menu-item" href="/about">Learn</a>
-        <a id="create" className="menu-item" href="/create">Create</a>
-        <a id="serve" className="menu-item" href="/serve">Serve</a>
-        <a onClick={ this.showSettings } className="menu-item--small" href="">Settings</a>
+      <Menu className="menu-item">
+        <a id={window.location.pathname === "/" ? "active" : ""}>
+        <link to="/">Home</link>
+        </a>
+        <a id={window.location.pathname === "/learn" ? "active" : ""}>
+        <link to="/">Learn</link>
+        </a>
+        <a id={window.location.pathname === "/create" ? "active" : ""}>
+        <link to="/">Create</link>
+        </a>
+        <a id={window.location.pathname === "/server" ? "active" : ""}>
+        <link to="/">Server</link>
+        </a>
       </Menu>
     );
-  }
-}
+  
+// Do we need setting?
 
 export default Sidebar;
