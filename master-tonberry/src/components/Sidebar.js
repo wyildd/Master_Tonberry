@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from "react-router-dom";
-import { bubble as Menu } from 'react-burger-menu'
+import { bubble as Menu } from 'react-burger-menu';
 
 const Sidebar = () => (
   // showSettings (event) {
@@ -8,20 +8,20 @@ const Sidebar = () => (
     
   // }
 
-      <Menu className="menu-item">
-        <a id={window.location.pathname === "/" ? "active" : ""}>
-        <link to="/">Home</link>
-        </a>
-        <a id={window.location.pathname === "/learn" ? "active" : ""}>
-        <link to="/">Learn</link>
-        </a>
-        <a id={window.location.pathname === "/create" ? "active" : ""}>
-        <link to="/">Create</link>
-        </a>
-        <a id={window.location.pathname === "/server" ? "active" : ""}>
-        <link to="/">Server</link>
-        </a>
-      </Menu>
+      <ul className="menu-item">
+        <li className={window.location.pathname === "/" ? "active" : ""}>
+        <Link to="/">Home</Link>
+        </li>
+        <li className={window.location.pathname === "/learn" ? "active" : ""}>
+        <Link to="/learn">Learn</Link>
+        </li>
+        <li className={window.location.pathname === "/create" ? "active" : ""}>
+        <Link to="/create">Create</Link>
+        </li>
+        <li className={window.location.pathname === "/server" ? "active" : ""}>
+        <Link to="/server">Server</Link>
+        </li>
+      </ul>
     );
   
 // Do we need setting?

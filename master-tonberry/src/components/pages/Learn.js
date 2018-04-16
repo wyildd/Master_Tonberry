@@ -1,7 +1,11 @@
 import React from "react";
+import Header from "./Header";
+import Fill from "./Fill";
+import WalkThrough from "./WalkThrough";
 
 const Learn = () => (
   <div>
+
     <h1>Learn Page</h1>
     <p>
       Nunc pharetra finibus est at efficitur. Praesent sed congue diam. Integer gravida dui mauris,
@@ -10,6 +14,7 @@ const Learn = () => (
       imperdiet. Praesent euismod mi justo, faucibus scelerisque risus cursus in. Sed rhoncus mollis
       diam, sit amet facilisis lectus blandit at.
     </p>
+
   </div>
 );
 
