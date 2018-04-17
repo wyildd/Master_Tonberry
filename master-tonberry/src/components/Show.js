@@ -37,17 +37,17 @@ class Show extends Component {
             </h3>
           </div>
           <div class="panel-body">
-            <h4><Link to="/"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Book List</Link></h4>
+            <h4><Link to="/"><span class="glyphicon glyphicon-th-list" aria-hidden="true"></span> Game Guide List</Link></h4>
             <dl>
-              <dt>ISBN:</dt>
+              <dt>Game:</dt>
               <dd>{this.state.book.isbn}</dd>
               <dt>Author:</dt>
               <dd>{this.state.book.author}</dd>
               <dt>Description:</dt>
               <dd>{this.state.book.description}</dd>
-              <dt>Publish Date:</dt>
+              <dt>Patch Version:</dt>
               <dd>{this.state.book.published_year}</dd>
-              <dt>Publisher:</dt>
+              <dt>Guide:</dt>
               <dd>{this.state.book.publisher}</dd>
             </dl>
             <Link to={`/edit/${this.state.book._id}`} class="btn btn-success">Edit</Link>&nbsp;
